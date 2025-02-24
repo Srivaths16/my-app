@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 export default function Page() {
   const [task, setTask] = useState("");
 
-  function handleChange(e) {
+  function handleChange(e: { target: { value: SetStateAction<string>; }; }) {
     
     setTask(e.target.value);
   }
