@@ -4,8 +4,7 @@ import { SetStateAction, useState } from "react";
 export default function Page() {
   const [task, setTask] = useState("");
 
-  function handleChange(e: { target: { value: SetStateAction<string>; }; }) {
-    
+  function handleChange(e: { target: { value: SetStateAction<string> } }) {
     setTask(e.target.value);
   }
   return (
@@ -23,7 +22,7 @@ export default function Page() {
           <button
             type="button"
             className="bg-orange-500 px-2 rounded-lg text-sm py-1 text-white"
-            onClick={(e) => {
+            onClick={() => {
               console.log(task);
             }}
           >
